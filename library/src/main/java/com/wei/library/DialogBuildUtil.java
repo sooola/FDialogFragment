@@ -11,6 +11,16 @@ public class DialogBuildUtil {
 
     public static String TAG = DialogBuildUtil.class.getName();
 
+    public static String CONFIRM_TAG = TAG + "confirm";
+
+    public static String LIST_TAG = TAG + "list";
+
+    public static String SINGLE_TAG = TAG + "single";
+
+    public static String MUL_TAG = TAG + "mul";
+
+    public static String LOADING_TAG = TAG + "loading";
+
     /**
      * 简单确认dialog
      * @param fragmentManager
@@ -20,7 +30,7 @@ public class DialogBuildUtil {
      */
     public static CommonDialog showSimpleConfirmDialog(FragmentManager fragmentManager, final String message , FDialogInterface.OnClickConfirmListener confirmListener){
         CommonDialog commonDialog =  CommonDialog.newInstance(new SimpleConfirmDialog(message,confirmListener));
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, CONFIRM_TAG);
         return commonDialog;
     }
 
@@ -28,7 +38,7 @@ public class DialogBuildUtil {
                                                FDialogInterface.OnClickConfirmListener confirmListener,
                                                FDialogInterface.OnClickCancelListener cancelListener){
         CommonDialog commonDialog = CommonDialog.newInstance(new SimpleConfirmDialog(message,confirmListener,cancelListener));
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, CONFIRM_TAG);
         return commonDialog;
     }
 
@@ -38,7 +48,7 @@ public class DialogBuildUtil {
                                                        FDialogInterface.OnClickCancelListener cancelListener){
         CommonDialog commonDialog = CommonDialog.newInstance(new SimpleConfirmDialog(message,confirmListener,cancelListener));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, CONFIRM_TAG);
         return commonDialog;
     }
 
@@ -53,7 +63,7 @@ public class DialogBuildUtil {
     public static CommonDialog showListDialog(FragmentManager fragmentManager, final String title , String[] items ,
                                                FDialogInterface.OnDataCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListDialog(title,items,onDataCallback));
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, LIST_TAG);
         return commonDialog;
     }
 
@@ -62,7 +72,7 @@ public class DialogBuildUtil {
                                               FDialogInterface.OnDataCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListDialog(title,items,onDataCallback));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, LIST_TAG);
         return commonDialog;
     }
 
@@ -77,7 +87,7 @@ public class DialogBuildUtil {
     public static CommonDialog showSingleChoiceDialog(FragmentManager fragmentManager, final String title , String[] items ,
                                            FDialogInterface.OnDataCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListSingleChoiceDialog(title,items,onDataCallback));
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, SINGLE_TAG);
         return commonDialog;
     }
 
@@ -86,7 +96,7 @@ public class DialogBuildUtil {
                                                       FDialogInterface.OnDataCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListSingleChoiceDialog(title,items,onDataCallback));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, SINGLE_TAG);
         return commonDialog;
     }
 
@@ -98,7 +108,7 @@ public class DialogBuildUtil {
         CommonDialog commonDialog = CommonDialog.newInstance(new ListSingleChoiceDialog(title,items,defCheckedItem ,
                 onDataCallback ,onClickCancelListener));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, SINGLE_TAG);
         return commonDialog;
     }
 
@@ -113,7 +123,7 @@ public class DialogBuildUtil {
     public static CommonDialog showMulChoiceDialog(FragmentManager fragmentManager, final String title , String[] items ,
                                       FDialogInterface.OnMulCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListMultiChoiceDialog(title,items,onDataCallback));
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, MUL_TAG);
         return commonDialog;
     }
 
@@ -122,7 +132,7 @@ public class DialogBuildUtil {
                                            FDialogInterface.OnMulCallbackListener onDataCallback){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListMultiChoiceDialog(title,items,onDataCallback));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, MUL_TAG);
         return commonDialog;
     }
 
@@ -132,25 +142,22 @@ public class DialogBuildUtil {
                                                    FDialogInterface.OnClickCancelListener onClickCancelListener){
         CommonDialog commonDialog = CommonDialog.newInstance(new ListMultiChoiceDialog(title,items,onDataCallback ,onClickCancelListener));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager, TAG);
+        commonDialog.show(fragmentManager, MUL_TAG);
         return commonDialog;
     }
 
     /**
      * 加载dialog
-     * @param fragmentManager
      * @return
      */
-    public static CommonDialog showLoadingDialog(FragmentManager fragmentManager){
+    public static CommonDialog showLoadingDialog(){
         CommonDialog commonDialog = CommonDialog.newInstance(new LoadingDialog("正在加载中..."));
-        commonDialog.show(fragmentManager ,TAG);
         return commonDialog;
     }
 
-    public static CommonDialog showLoadingDialog(FragmentManager fragmentManager ,String title , boolean cancelable){
+    public static CommonDialog showLoadingDialog(String title , boolean cancelable){
         CommonDialog commonDialog = CommonDialog.newInstance(new LoadingDialog(title));
         commonDialog.setCancelable(cancelable);
-        commonDialog.show(fragmentManager ,TAG);
         return commonDialog;
     }
 

@@ -105,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_loading_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final CommonDialog loadingDialog = DialogBuildUtil.showLoadingDialog(getSupportFragmentManager());
+                final CommonDialog loadingDialog = DialogBuildUtil.showLoadingDialog();
+                loadingDialog.show(getSupportFragmentManager() ,DialogBuildUtil.LOADING_TAG);
                 mHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
