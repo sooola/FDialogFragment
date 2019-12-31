@@ -1,5 +1,7 @@
-#FDialogFragment
+#FDialogFragment  
 封装FDialogFragment简化弹窗dialog使用
+
+demo示例如下，提供确认，列表，多选dialog，只要一行代码即可使用  
 
 ![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/GIF.gif)
 
