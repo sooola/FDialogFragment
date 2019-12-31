@@ -60,7 +60,7 @@ DialogBuildUtil.showListDialog(getSupportFragmentManager(), "城市列表", city
 });
 ```
 
-3.单选列表
+3.单选列表  
 ![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/3.png)
 
 ```java
@@ -73,7 +73,7 @@ DialogBuildUtil.showSingleChoiceDialog(getSupportFragmentManager(), "城市列�
 });
 ```
 
-4.多选列表
+4.多选列表  
 ![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/4.png)
 
 ```java
@@ -87,7 +87,7 @@ DialogBuildUtil.showMulChoiceDialog(getSupportFragmentManager(), "城市列表",
 });
 ```
 
-5.加载中dialog
+5.加载中dialog  
 
 ```java
 final CommonDialog loadingDialog = DialogBuildUtil.showLoadingDialog();
