@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_confirm_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="简单的确认dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_list_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="列表dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_singelist_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="单选列表dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_mullist_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多选列表dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_loading_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载中dialog"
+        />
+
+    <Button
+        android:id="@+id/btn_progress_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进度条dialog"
+        />
+
+
+</LinearLayout>
