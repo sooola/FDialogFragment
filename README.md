@@ -1,3 +1,8 @@
+#FDialogFragment
+封装FDialogFragment简化弹窗dialog使用
+
+![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/GIF.gif)
+
 # 导入
 
 1.在根目录的build.gradle
@@ -23,7 +28,8 @@ allprojects {
 
 所有dialog 通过DialogBuildUtil 构建
 
-1.简单的确认dialog
+1.简单的确认dialog  
+![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/1.png)
 
 ```java
                 DialogBuildUtil.showSimpleConfirmDialog(getSupportFragmentManager(), "test111", new FDialogInterface.OnClickConfirmListener() {
@@ -39,7 +45,8 @@ allprojects {
                 });
 ```
 
-2.列表dialog
+2.列表dialog  
+![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/2.png)
 
 ```java
                 DialogBuildUtil.showListDialog(getSupportFragmentManager(), "城市列表", city, new FDialogInterface.OnDataCallbackListener() {
@@ -52,6 +59,7 @@ allprojects {
 ```
 
 3.单选列表
+![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/3.png)
 
 ```java
                 DialogBuildUtil.showSingleChoiceDialog(getSupportFragmentManager(), "城市列表", city, new FDialogInterface.OnDataCallbackListener() {
@@ -64,6 +72,7 @@ allprojects {
 ```
 
 4.多选列表
+![image](https://github.com/sooola/FDialogFragment/blob/master/screenshot/4.png)
 
 ```java
                 DialogBuildUtil.showMulChoiceDialog(getSupportFragmentManager(), "城市列表", city, new FDialogInterface.OnMulCallbackListener() {
