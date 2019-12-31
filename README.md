@@ -96,5 +96,5 @@ loadingDialog.show(getSupportFragmentManager() ,DialogBuildUtil.LOADING_TAG);
 ```
 
 ## 感谢
-部分代码参考一下项目，感谢大神的付出  
+部分代码参考以下项目，感谢大神的付出  
 https://github.com/developerHaoz/DialogFragmentDemos
