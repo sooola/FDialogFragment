@@ -23,7 +23,7 @@ allprojects {
 
 ```java
 	dependencies {
-	        implementation 'com.github.sooola:FDialogFragment:1.0
+	        implementation 'com.github.sooola:FDialogFragment:1.0'
     }
 ```
 
